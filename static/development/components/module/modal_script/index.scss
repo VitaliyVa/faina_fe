@@ -1,0 +1,104 @@
+.modal {
+    &__block {
+        transition: all .2s;
+        padding: 50px 60px;
+        width: 100%;
+        max-width: 500px;
+        background: #fff;
+        position: fixed;
+        z-index: -1;
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        border-radius: 6px;
+        transform: translate(-50%, -50%);
+        -webkit-box-shadow: 14px 10px 13px -6px rgba(189,189,189,1);
+        -moz-box-shadow: 14px 10px 13px -6px rgba(189,189,189,1);
+        box-shadow: 14px 10px 13px -6px rgba(189,189,189,1);
+
+        &.active {
+            z-index: 9999;
+            opacity: 1;
+        }
+       .validation_error {
+        bottom: -20px;
+        left: 10px;
+       }
+    }
+    &_close {
+        transition: all .2s;
+        color: #0000007a;
+        cursor: pointer;
+        display: flex;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        &:hover {
+            color: #73CAC2;
+        }
+    }
+    &_svg {
+        margin-right: 8px;
+    }
+    &_title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &_form {
+        padding-top: 10px;
+        margin-top: 40px;
+        border-top: 1px solid #73CAC2;
+    }
+   &_forget_btn {
+       text-transform: uppercase;
+       display: block;
+        width: 100%;
+        margin: 30px 0;
+       cursor: pointer;
+       text-align: center;
+   }
+   &_btn {
+       text-transform: uppercase;
+       &__block {
+           display: flex;
+           align-items: center;
+           width: 100%;
+           justify-content: space-between;
+       }
+   }
+   &_new_user {
+       text-transform: uppercase;
+   }
+  
+}
+
+
+
+@media (max-width: 480px) {
+    .modal_btn__block {
+        flex-direction: column;
+
+        .modal_btn {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .modal_open {
+            width: 100%;
+        }
+    }
+    .modal_title {
+        justify-content: flex-start;
+        padding-right: 30px;
+    }
+    .modal__block {
+        padding: 15px;
+    }
+    .modal_form {
+        padding-top: 0px;
+        margin-top: 10px;
+    }
+}

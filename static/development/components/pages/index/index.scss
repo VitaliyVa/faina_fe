@@ -1,0 +1,299 @@
+.index {
+    &_section {
+        position: relative;
+    }
+}
+
+.main {
+    &_slider {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        .swiper-pagination {
+            font-size: 16px;
+            bottom: 10px !important;
+            left: 585px !important;
+            right: unset;
+            color: #fff;
+            text-align: start;
+        }
+        &_uzor {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            z-index: -1;
+        }
+        &_rentagle {
+            position: absolute;
+            top: 90px;
+            z-index: -1;
+            right: 32px;
+        }
+        &_btn {
+            &__block {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                bottom: 0px;
+                left: 415px;
+                width: 160px;
+                height: 80px;
+            }
+        }
+        &_info {
+            &__block {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                height: 100%;
+                left: 100px;
+                top: 0;
+                background: rgba(255, 255, 255, 0.803);
+                backdrop-filter: blur(6px);
+                z-index: 9;
+                padding: 90px 20px;
+                padding-right: 65px;
+            }
+            &_title {
+                padding-top: 100px;
+                position: relative;
+                z-index: 9;
+            }
+            &_description {
+                position: relative;
+                z-index: 9;
+                text-align: right;
+                width: 185px;
+                margin-top: 12px;
+                margin-bottom: 90px;
+            }
+            &_btn {
+                position: relative;
+                z-index: 9;
+                margin-right: 90px;
+            }
+        }
+    }
+    &_slide {
+        img {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+        }
+    }
+}
+
+.swiper-button-prev {
+    width: 80px;
+    height: 80px;
+    background: #000;
+    color: #fff;
+    left: 0;
+    top: 0;
+    transform: unset;
+    margin-top: 0;
+}
+
+.swiper-button-next {
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    color: #000;
+    transform: unset;
+    margin-top: 0;
+}
+
+.preferens {
+    &__block {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &_item {
+        padding: 0px 20px;
+        margin: 20px;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &_img {
+        margin-right: 20px;
+    }
+}
+
+.shares {
+    &_section {
+        position: relative;
+        padding: 50px 0;
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    &_item {
+        overflow: hidden;
+        width: 33.3%;
+        padding: 0px 5px;
+        img {
+            transition: all .4s;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.details {
+    &_section {
+        position: relative;
+        display: flex;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        align-items: center;
+    }
+    &_video {
+        width: 50%;
+        height: 350px;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &_content {
+        width: 50%;
+        padding-left: 100px;
+    }
+    &_title {
+        span {
+            text-transform: uppercase;
+            font-size: 30px;
+        }
+    }
+    &_btn {
+        border-bottom: 1px solid #000;
+        &__block {
+            display: flex;
+            justify-content: end;
+        }
+    }
+    &_text {
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+}
+
+.insta {
+    &_section {
+        position: relative;
+    }
+    &_title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    &__block {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+    }
+    &_item {
+        width: 16.6%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 1300px) {
+    .preferens_item {
+        width: calc(50% - 20px);
+        margin: 10px;
+        justify-content: left;
+    }
+    .main_slide img {
+        height: 550px;
+    }
+}
+
+@media (max-width: 992px) {
+    .details_section {
+        flex-direction: column;
+    }
+    .details_video {
+        width: 100%;
+        height: 350px;
+    }
+    .details_content {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 30px;
+    }
+    .main_slide img {
+        height: 350px;
+    }
+    .main_slider {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .main_slider_info__block {
+        position: relative;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: 20px;
+    }
+    .main_slider_info_title {
+        padding-top: 0;
+    }
+    .main_slider_info_description {
+        margin-top: -2px;
+        margin-bottom: 14px;
+        text-align: center;
+    }
+    .main_slider_info_btn {
+        margin-right: 0;
+    }
+    .main_slider_btn__block {
+        bottom: 231px;
+        left: 15px;
+    }
+}
+
+@media (max-width: 580px) {
+    .details_video {
+        width: 100%;
+        height: 220px;
+    }
+    .main_slide img {
+        height: 300px;
+    }
+    .preferens_item {
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .preferens__block {
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    .main_slider_info_title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 280px;
+        }
+    }
+}

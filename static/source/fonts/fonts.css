@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'CenturyGothic';
+    src: url('./CenturyGothic.woff2') format('woff2'), url('./CenturyGothic.ttf') format('truetype'), /* Только если нужна поддержка старых Android, иначе закомментировать */
+    url('./CenturyGothic.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CenturyGothic';
+    src: url('./CenturyGothic-Bold.woff2') format('woff2'), url('./CenturyGothic-Bold.ttf') format('truetype'), /* Только если нужна поддержка старых Android, иначе закомментировать */
+    url('./CenturyGothic-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
